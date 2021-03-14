@@ -39,7 +39,7 @@ def lambda_handler(event, context):
         custom_labels.append(i.strip())
     
     print ("Custom Labels : " + str(custom_labels))
-    labels= custom_labels+rekognition_labels
+    labels= custom_labels+rekognition_labels+['snake']
     print(labels)
 
     elastic_search_json_object = {
