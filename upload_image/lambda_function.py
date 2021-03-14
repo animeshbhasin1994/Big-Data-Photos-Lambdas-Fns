@@ -16,7 +16,7 @@ def lambda_handler(event, context):
     '''
     
     print(event)
-    
+    print ("Test to see if this line is updated via Code pipleline")
     body = json.loads(event["body"])
     #body = event["body"]
     
