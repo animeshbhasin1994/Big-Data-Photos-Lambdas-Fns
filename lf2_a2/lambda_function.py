@@ -21,6 +21,7 @@ def lambda_handler(event, context):
     client = boto3.client('lex-runtime')
     #TODO
     print (event)
+    print("Test to see if this line is updated via Code pipleline")
     input_text = event['q']
     # input_text = 'hen and sam'
     
