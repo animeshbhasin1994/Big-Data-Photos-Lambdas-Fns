@@ -30,7 +30,7 @@ Resources:
       FunctionName: new_lf1a2
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
-      CodeUri: ./lf1a2
+      CodeUri: ./lf1_a2
       Description: ''
       MemorySize: 128
       Timeout: 60
@@ -46,10 +46,10 @@ Resources:
   lf2a2:
     Type: 'AWS::Serverless::Function'
     Properties:
-      FunctionName: lf1a2
+      FunctionName: new_lf2a2
       Handler: lambda_function.lambda_handler
       Runtime: python3.6
-      CodeUri: ./new_lf1a2
+      CodeUri: ./lf2_a2
       Description: ''
       MemorySize: 128
       Timeout: 30
