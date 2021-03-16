@@ -2,7 +2,7 @@ import json
 import boto3
 import requests
 from requests_aws4auth import AWS4Auth
-
+from stemming.porter2 import stem
 def create_presigned_url(bucket_name, object_name, expiration=3600):
 
     s3_client = boto3.client('s3')
@@ -24,12 +24,17 @@ def lambda_handler(event, context):
     print("Test to see if this line is updated via Code pipleline")
     input_text = event['q']
     # input_text = 'hen and sam'
-    
+    s = ' '
+    words = input_text.split()
+    for idx, val in enumerate(words):
+        words[idx] = stem(words[idx])
+    s = s.join(words)
+
     response = client.post_text(
         botName = 'Label_disambiguator',
         botAlias = 'Label_disambiguator',
         userId='x1',
-        inputText = input_text)
+        inputText = s)
     # print (response)
     labels = []
     if 'intentName' not in response:

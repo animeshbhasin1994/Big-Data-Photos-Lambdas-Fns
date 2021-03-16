@@ -1,0 +1,15 @@
+../../../../../../../Library/Caches/com.apple.python/Users/animeshbhasin/Desktop/Projects/venv/lib/python3.8/site-packages/stemming/__init__.cpython-38.pyc
+../../../../../../../Library/Caches/com.apple.python/Users/animeshbhasin/Desktop/Projects/venv/lib/python3.8/site-packages/stemming/lovins.cpython-38.pyc
+../../../../../../../Library/Caches/com.apple.python/Users/animeshbhasin/Desktop/Projects/venv/lib/python3.8/site-packages/stemming/paicehusk.cpython-38.pyc
+../../../../../../../Library/Caches/com.apple.python/Users/animeshbhasin/Desktop/Projects/venv/lib/python3.8/site-packages/stemming/porter.cpython-38.pyc
+../../../../../../../Library/Caches/com.apple.python/Users/animeshbhasin/Desktop/Projects/venv/lib/python3.8/site-packages/stemming/porter2.cpython-38.pyc
+../stemming/__init__.py
+../stemming/lovins.py
+../stemming/paicehusk.py
+../stemming/porter.py
+../stemming/porter2.py
+PKG-INFO
+SOURCES.txt
+dependency_links.txt
+top_level.txt
+zip-safe
