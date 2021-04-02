@@ -4,7 +4,9 @@ import requests
 from requests_aws4auth import AWS4Auth
 from stemming.porter2 import stem
 import inflect
+
 p = inflect.engine()
+
 
 def create_presigned_url(bucket_name, object_name, expiration=3600):
     s3_client = boto3.client('s3')
@@ -32,11 +34,14 @@ def lambda_handler(event, context):
     s = ' '
     words = input_text.split()
     print(words)
-    print(stem('animals'))
+
     for idx, val in enumerate(words):
-        words[idx] = p.singular_noun(words[idx])
+        if p.singular_noun(val):
+            words[idx] = p.singular_noun(val)
+        else:
+            words[idx] = val
     s = s.join(words)
-    print(s)
+
     response = client.post_text(
         botName='Label_disambiguator',
         botAlias='Label_disambiguator',
