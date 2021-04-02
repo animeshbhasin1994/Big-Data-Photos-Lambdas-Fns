@@ -8,7 +8,7 @@ from elasticsearch import Elasticsearch, RequestsHttpConnection
 def lambda_handler(event, context):
     # TODO implement
     print(event)
-
+    #Test codepipeline comment
     bucket_name = event["Records"][0]["s3"]["bucket"]["name"]
     image_key = event["Records"][0]["s3"]["object"]["key"]
 
